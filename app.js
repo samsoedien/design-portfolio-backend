@@ -112,7 +112,8 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
-const port = process.env.PORT || 3001;
+// const port = process.env.PORT || 3001;
+const port = process.env.PORT;
 app.listen(port, () => console.log(`Server listening on port ${port}`));
 // https.createServer({ key: privateKey, cert: certificate }, app).listen(port, () => console.log(`Server listening on port ${port}`));
 
