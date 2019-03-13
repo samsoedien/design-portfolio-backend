@@ -1,0 +1,51 @@
+{
+  "name": "design-portfolio",
+  "version": "1.0.0",
+  "description": "Design portfolio showcasing design projects, competences and contact information.",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/samsoedien/design-portfolio.git"
+  },
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "start": "set PORT=3001 && node app",
+    "server": "set PORT=3001 && nodemon app --ignore client",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "design",
+    "portfolio",
+    "samsoedien"
+  ],
+  "author": "Samsoedien",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.4",
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.3",
+    "concurrently": "^4.1.0",
+    "csurf": "^1.9.0",
+    "dotenv": "^6.2.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "helmet": "^3.15.1",
+    "jsonwebtoken": "^8.5.0",
+    "mongodb": "^3.1.13",
+    "mongoose": "^5.4.14",
+    "morgan": "^1.9.1",
+    "multer": "^1.4.1",
+    "nodemailer": "^5.1.1",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "uuid": "^3.3.2",
+    "validator": "^10.11.0"
+  },
+  "devDependencies": {
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "nodemon": "^1.18.10"
+  }
+}
