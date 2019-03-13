@@ -3,7 +3,7 @@ const fs = require('fs');
 const https = require('https');
 
 const express = require('express');
-const morgan = require('morgan');
+// const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const multer = require('multer');
 const passport = require('passport');
@@ -47,14 +47,14 @@ const fileFilter = (req, file, cb) => {
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
-const accessLogStream = fs.createWriteStream(
-  path.join(__dirname, 'logs', 'access.log'),
-  { flags: 'a' }
-);
+// const accessLogStream = fs.createWriteStream(
+//   path.join(__dirname, 'logs', 'access.log'),
+//   { flags: 'a' }
+// );
 
 app.use(helmet());
 app.use(compression());
-app.use(morgan('combined', { stream: accessLogStream }));
+// app.use(morgan('combined', { stream: accessLogStream }));
 // app.use(morgan('dev'));
 
 
