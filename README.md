@@ -1,3 +1,3 @@
-# design-portfolio
+# design-portfolio-backend
 
-Design portfolio showcasing design projects, competences and contact information.
+Backend for Design portfolio showcasing design projects, competences and contact information.
