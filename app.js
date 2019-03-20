@@ -14,6 +14,7 @@ const dotenv = require('dotenv').config();
 const csrf = require('csurf');
 
 const contactRoutes = require('./routes/contact')
+const userRoutes = require('./routes/users')
 
 const app = express();
 
@@ -61,6 +62,7 @@ app.use(compression());
 // Body Parser Middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+// app.use(express.json()); // Use BodyParser within express package
 
 // Multer Middleware
 app.use(
@@ -81,6 +83,7 @@ app.use((req, res, next) => {
 
 // Use Routes
 app.use('/api/contact', contactRoutes);
+app.use('api/users', userRoutes);
 
 app.use((error, req, res, next) => {
   console.log(error);
